@@ -1,0 +1,22 @@
+{
+    "presets": ["env", "stage-2", "react"],
+    "plugins": ["react-hot-loader/babel",
+      "syntax-async-functions",
+      [
+        "transform-runtime",
+        {
+          "polyfill": false,
+          "regenerator": true
+        }
+      ],
+      [
+        "import",
+        {
+          "libraryName": "antd",
+          "libraryDirectory": "es",
+          "style": true
+        }
+      ]
+    ]
+  }
+  

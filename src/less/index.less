@@ -1,0 +1,161 @@
+
+.admin-header {
+    background-color: white;
+    padding: 0px 20px;
+    margin-left: 2px;
+    display: flex;
+    align-items: center;
+
+    .trigger {
+        font-size: 20px;
+    }
+
+    .top-user {
+        right: 50px;
+        top: 0;
+        position: absolute;
+
+        .top-user-wrapper {
+            display: flex;
+            flex-direction: row;
+            height: 64px;
+            align-items: center;
+            .ant-avatar {
+
+            }
+            
+            .username {
+                margin-left: 8px;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+
+.logo {
+    height: 64px;
+    // background-color: rgba(10,92,162,1);
+    background-color: #1890ff;
+    
+    .logo-image {
+        width: 70%;
+        height: 100%;
+        background-image: url(https://mend.mn/app/images/mendevent.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 120px;
+        margin: 0px auto;
+
+        &.shrink {
+            background-position: 7px center;            
+            width: 50%;
+        }
+    }
+}
+
+.event-list {
+
+    .event-button {
+        width: 150px;
+    }
+
+    .event-identifier {
+        color: grey;
+        font-weight: bold;
+    }
+
+    .event-banner {
+        height: 200px;
+        width: 200px;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .event-info {
+
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        max-height: 200px;
+
+        .event-name {
+            padding: 10px 10px 15px 10px;
+            text-transform: uppercase;
+            font-weight: bold;  
+            height: 80px; 
+            width: 600px;
+        }
+
+        .event-general-info {
+            padding-left: 10px;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .event-date {
+            padding-left: 10px;
+            padding-top: 10px;
+        }
+
+        .event-location {
+            padding-left: 10px;
+            padding-top: 10px;
+        }
+    }
+
+    .selectedRow {
+
+        background:#1890ff;
+        color: white;
+
+        &:hover {     
+            color: white;
+
+            >td {
+                background: #1890ff !important;
+
+            }       
+            
+        }
+    }
+}
+
+
+.event-program {
+    padding: 30px 30px 30px 70px;
+    .program-list {
+        td {
+            padding: 10px 20px 10px 0px;
+        }
+    }
+}
+
+.program-modal {
+    width: 80%;
+    height: 90%;
+}
+
+.form-table {
+    td {
+        padding-bottom: 10px;
+        padding-right: 20px;
+    }
+}
+
+.speaker-info{
+    width: 300px
+}
+
+.speaker-picture {
+    height: 80px;
+    width: 80px;
+    background-position: center;
+    background-size: cover;
+}
+
+.attendance-div {
+    .ant-tabs-content {
+        height: 100%;
+    }
+}

@@ -1,0 +1,114 @@
+POST http://192.168.77.137:1337/doctors/customCreate HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+username=11223344
+&password=12345678
+&role=6
+&firstname=A
+&lastname=B
+&register_number=
+&phone=11223344
+
+"react-hot-loader": "^4.12.8",
+
+##############
+
+POST http://192.168.77.137:1337/doctors/customCreate HTTP/1.1
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="username"
+
+11223344
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="password"
+
+12345678
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="firstname"
+
+A
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="lastname"
+
+B
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="register_number"
+
+HD12345678
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="phone"
+
+11223344
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+
+###################
+
+# POST http://mass.chatbot.mn/sms/api/sms/send
+# Content-Type: application/json
+# Authorization: Basic bWVuZF9zbXM6bWVuZEBwNCQk
+
+# {
+#     "botId": "mend_event",
+#     "phone": "88613371",
+#     "message": "its a test"
+# }
+
+
+###################
+POST http://localhost:1337/sms/confirmation
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTQsImlhdCI6MTU5Njc3MzUwOSwiZXhwIjoxNTk5MzY1NTA5fQ.-q_sqSBXcNDy8CV2f4o3P3PAuzTomFtKMU_yQJyM-Fo
+
+{
+    "phone": "88613371",
+    "device_id": "1",
+    "code": "451249"
+}
+
+#################
+
+POST http://localhost:1337/auth/local
+Content-Type: application/json
+
+{
+    "identifier": "88613371", 
+    "password": "12345678"
+}
+
+######################
+POST http://localhost:1337/auth/local/register
+Content-Type: application/json
+
+{
+    "username": "11223344",
+    "password": "123456",
+    "email": "112233441@mend.mn",
+    "role": 6,
+    "related_id": 1
+}
+
+#####################
+POST http://localhost:1337/auth/forgot-password
+Content-Type: application/json
+
+{
+    "email": "enkhbold@chatbot.mn"
+}
+
+
+#######################
+POST http://192.168.77.137:1337/doctors/listbyevent
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTQsImlhdCI6MTU5Njc3MzUwOSwiZXhwIjoxNTk5MzY1NTA5fQ.-q_sqSBXcNDy8CV2f4o3P3PAuzTomFtKMU_yQJyM-Fo
+
+{
+    "event_id": 215
+}
+
+###########
+GET http://192.168.77.137:1337/doctors
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTQsImlhdCI6MTU5Njc3MzUwOSwiZXhwIjoxNTk5MzY1NTA5fQ.-q_sqSBXcNDy8CV2f4o3P3PAuzTomFtKMU_yQJyM-Fo
